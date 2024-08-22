@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Book Recommendations</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#popular">Popular Books</a>
+                <a href="#genres">Genres</a>
+                <a href="#write-to-us">Write to Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="container">
+            <h2><strong>Welcome to Book Recommendations</strong></h2>
+            <p><h3 style="align: center;">Discover the best books across various genres. Browse through our collection and find your next favorite read!</h3></p>
+        </section>
+
+        <section id="popular" class="container">
+            <h2>Most Popular Books of the Month</h2>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81Lxz1onxEL._AC_UF1000,1000_QL80_.jpg" alt="Popular Book 1">
+                <div class="book-title">The Fury</div>
+                <div class="book-price"><span>&#8377;</span>1948/-</div>
+                <a href="https://www.amazon.in/Fury-Novel-Alex-Michaelides/dp/125075898X" target="_blank" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81xIPfJ6iUL._AC_UF1000,1000_QL80_.jpg" alt="Popular Book 2">
+                <div class="book-title">A Thousand Splendid Suns</div>
+                <div class="book-price"><span>&#8377;</span>930/-</div>
+                <a href="https://www.amazon.in/Thousand-Splendid-Suns-Khaled-Hosseini/dp/1408844443" target="_blank" class="buy-button">Buy Now</a>
+            </div>
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81meHRRFChL._AC_UF1000,1000_QL80_.jpg" alt="Popular Book 3">
+                <div class="book-title">A Flicker in the Dark</div>
+                <div class="book-price"><span>&#8377;</span>1923/-</div>
+                <a href="https://www.amazon.in/Flicker-Dark-Novel-Stacy-Willingham/dp/1250803829" target="_blank" class="buy-button">Buy Now</a>
+            </div>
+        </section>
+
+        <section id="genres" class="container">
+            <h2>Browse by Genre</h2>
+            <div class="genre">
+                <h3>Romance</h3>
+                <div class="book">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTMtIHKz6P5NlEdwV3Mt1lL_fkoqXTj57c8hf-xXO06O6fIE3Gr" alt="Romance Book 1">
+                    <div class="book-title">Happy Place</div>
+                    <div class="book-price">$311</div>
+                    <a href="https://www.amazon.in/Happy-Place-Emily-Henry/dp/0593441273" target="_blank" class="buy-button">Buy Now</a>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/71KcUgYanhL._AC_UF1000,1000_QL80_.jpg" alt="Romance Book 2">
+                    <div class="book-title">The Seven Husbands of Evelyn Hugo</div>
+                    <div class="book-price">$402</div>
+                    <a href="https://www.amazon.in/Seven-Husbands-Evelyn-Hugo-Novel/dp/1501161938" target="_blank" class="buy-button">Buy Now</a>
+                </div>
+            </div>
+            <div class="genre">
+                <h3>Comics</h3>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/81rk9mi6VOL._AC_UF1000,1000_QL80_.jpg" alt="Comic Book 1">
+                    <div class="book-title">Almost American Girl</div>
+                    <div class="book-price">$1369</div>
+                    <a href="https://www.amazon.in/ALMOST-AMERICAN-GIRL-ILLUS-MEMOIR/dp/0062685090" target="_blank" class="buy-button">Buy Now</a>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/81bGs636lzL._AC_UF1000,1000_QL80_.jpg" alt="Comic Book 2">
+                    <div class="book-title">Monstress</div>
+                    <div class="book-price">$724/-</div>
+                    <a href="https://www.amazon.in/Monstress-1-Awakening-Marjorie-Liu/dp/1632157098" target="_blank" class="buy-button">Buy Now</a>
+                </div>
+            </div>
+            <!-- Add more genres and books as needed -->
+        </section>
+
+        <section id="write-to-us" class="container">
+            <h2>Write to Us</h2>
+            <form id="feedback-form" onsubmit="return submitFeedback()">
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 M. Dhatri Reddy. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function submitFeedback() {
+            const feedback = document.getElementById('feedback').value;
+            if (feedback) {
+                alert('Thank you for your feedback!');
+                document.getElementById('feedback').value = '';
+            } else {
+                alert('Please enter your feedback before submitting.');
+                return false; 
+            }
+            return false;
+        }
+        </script>
+</body>
+</html>
